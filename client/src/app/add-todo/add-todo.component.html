@@ -11,7 +11,7 @@
       <input type="text" class="form-control"  placeholder="Enter date" [(ngModel)]='houseworkModel.date' name="date">
     </div>
     <select class="col-3" *ngIf='familyModel'  [(ngModel)]='houseworkModel.id_family_member' name="family">
-      <option *ngFor='let one of familyModel' value='{{one.id}}'>{{one.name}}</option>
+      <option *ngFor='let one of familyModel' value='{{one.name}}'>{{one.name}}</option>
     </select>
     <input type="button" value="Add" (click)="addTodo()">
   </form>
