@@ -1,0 +1,20 @@
+<br><br>
+<h2>Home Management</h2>
+<h3>Todo List</h3>
+<table class="table table-dark col-3" *ngIf='all_tasks'>
+    <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Description</th>
+          <th scope="col">Family-member</th>
+        </tr>
+      </thead>
+  <tbody *ngFor='let one of all_tasks'>
+    <tr>
+      <td>{{one.date}}</td>
+      <td>{{one.description}}</td>
+      <td>{{one.id_family_member}}</td>
+    </tr>
+   
+  </tbody>
+</table>

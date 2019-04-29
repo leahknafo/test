@@ -1,0 +1,17 @@
+<h1>Add Todo List</h1>
+<form>
+    <div class="form-group col-3">
+        <br>
+        <label>Description</label>
+      <input type="text" class="form-control"  placeholder="Enter housework" [(ngModel)]='houseworkModel.description' name="name">
+    </div>
+    <div class="form-group col-3">
+        <br>
+        <label>Date</label>
+      <input type="text" class="form-control"  placeholder="Enter date" [(ngModel)]='houseworkModel.date' name="date">
+    </div>
+    <select class="col-3" *ngIf='familyModel'  [(ngModel)]='houseworkModel.id_family_member' name="family">
+      <option *ngFor='let one of familyModel' value='{{one.id}}'>{{one.name}}</option>
+    </select>
+    <input type="button" value="Add" (click)="addTodo()">
+  </form>
